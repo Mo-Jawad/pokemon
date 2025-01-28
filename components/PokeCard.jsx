@@ -1,6 +1,6 @@
 const PokeCard = ({pokemonData}) => {
     return (
-        <section className="w-[28%] flex-col hover:shadow-2xl hover:-mt-3 border-green-400 hover:inset-shadow-indigo-500/50 dark:shadow-blue-400 hover:border-2 justify-center h-96 rounded-md p-2 dark:bg-emerald-200 bg-white ">
+        <section className="w-[28%] max-md:w-[35%] flex-col hover:shadow-2xl hover:-mt-3 border-green-400 hover:inset-shadow-indigo-500/50 dark:shadow-blue-400 hover:border-2 justify-center h-96 rounded-md p-2 dark:bg-emerald-200 bg-white ">
             
             <figure className="w-[100%] flex-col mt-4 justify-center mb-4">
                 <div className="w-full h-30 flex justify-center">
