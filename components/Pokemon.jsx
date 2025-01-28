@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { DarkModeToggle } from "./DarkModeToggle";
 import PokeCard from './PokeCard';
 
  const Pokemon = () => {
@@ -65,15 +66,20 @@ import PokeCard from './PokeCard';
 
 
     return (
-        <section className="h-[100%] flex-col items-center ">
+        <section className="min-h-screen flex-col items-center dark:bg-slate-700">
         <header >
-            <h1 className="text-center text-5xl font-bold p-3.5">Pokemon </h1>
+
+            <section className="flex justify-between mr-6 ml-2 items-center">
+            <h1 className="dark:text-white text-center text-5xl font-bold p-3.5">Pokemon </h1>
+            <DarkModeToggle/>
+            </section>
+
             <div className="flex my-4 w-full justify-center">
-            <input className="w-1/3 py-2 px-4 focus:outline-none border-amber-400 border-2 rounded-md" type="text" placeholder="Search here" value={search} onChange={(e) => setSearch(e.target.value)} /> 
+            <input className="w-1/3 py-2 px-4 focus:outline-none dark:bg-white dark:text-black border-amber-400 border-2 rounded-md" type="text" placeholder="Search here" value={search} onChange={(e) => setSearch(e.target.value)} /> 
             </div>
         </header>
         <section className="w-[90%]  flex ml-18 gap-1  h-full ">
-            <ul className="w-[100%] gap-1 m-2 justify-evenly  flex flex-wrap">
+            <ul className="w-[100%] gap-6 m-2 justify-evenly  flex flex-wrap">
                 {searchData.map((currPoke) =>   {
                     return <PokeCard key={currPoke.id} pokemonData={currPoke}/> })
                 }

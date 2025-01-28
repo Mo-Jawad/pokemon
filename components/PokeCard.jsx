@@ -1,6 +1,6 @@
 const PokeCard = ({pokemonData}) => {
     return (
-        <section className="w-[28%] flex-col hover:shadow-2xl hover:-mt-3 border-green-400 hover:inset-shadow-indigo-500/50 hover:border-2 justify-center h-96 rounded-md p-2 bg-white ">
+        <section className="w-[28%] flex-col hover:shadow-2xl hover:-mt-3 border-green-400 hover:inset-shadow-indigo-500/50 dark:shadow-blue-400 hover:border-2 justify-center h-96 rounded-md p-2 dark:bg-emerald-200 bg-white ">
             
             <figure className="w-[100%] flex-col mt-4 justify-center mb-4">
                 <div className="w-full h-30 flex justify-center">
@@ -10,7 +10,7 @@ const PokeCard = ({pokemonData}) => {
             </figure>
 
             <div className="flex w-[100%] justify-center">
-            <span className="p-2 px-4 rounded-lg bg-green-500 text-white font-bold">
+            <span className="p-2 px-4 text-lg rounded-lg bg-green-500 dark:bg-yellow-500 dark:text-black text-white font-bold">
                 {pokemonData.types.map((currType) => currType.type.name).join(", ")}
             </span>
             </div>
