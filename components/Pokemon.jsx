@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { DarkModeToggle } from "./DarkModeToggle";
 import PokeCard from './PokeCard';
+import PostList from "./Posts/PostList";
 
  const Pokemon = () => {
     const [pokemon, setPokemon] = useState([])
@@ -66,7 +67,7 @@ import PokeCard from './PokeCard';
 
 
     return (
-        <section className="min-h-screen w-full flex-col items-center dark:bg-slate-700">
+        <section className="min-h-screen h-full w-full flex-col items-center dark:bg-slate-700">
         <header >
 
             <section className=" max-md:flex-col flex justify-between md:mr-6 md:ml-2 items-center">
@@ -76,6 +77,7 @@ import PokeCard from './PokeCard';
 
             <div className="flex my-4 w-full justify-center">
             <input className="w-2/3 py-2 px-4 focus:outline-none dark:bg-white dark:text-black border-amber-400 border-2 rounded-md" type="text" placeholder="Search here" value={search} onChange={(e) => setSearch(e.target.value)} /> 
+            
             </div>
         </header>
         <section className="w-[90%]  flex ml-18 gap-1  h-full ">
@@ -86,7 +88,12 @@ import PokeCard from './PokeCard';
             </ul>
                 
        </section>
+
+       <PostList/>
+
        </section>
+
+
     )
 
 
